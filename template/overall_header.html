@@ -23,13 +23,6 @@
 	<!-- IF S_ENABLE_FEEDS_TOPIC and S_TOPIC_ID --><link rel="alternate" type="application/atom+xml" title="{L_FEED} - {L_TOPIC} - {TOPIC_TITLE}" href="{U_FEED}?f={S_FORUM_ID}&amp;t={S_TOPIC_ID}" /><!-- ENDIF -->
 <!-- ENDIF -->
 
-<!--
-	phpBB style name: prosilver
-	Based on style:   prosilver (this is the default phpBB3 style)
-	Original author:  Tom Beddard ( http://www.subBlue.com/ )
-	Modified by:
--->
-
 <script type="text/javascript">
 // <![CDATA[
 	var jump_page = '{LA_JUMP_PAGE}:';
@@ -93,83 +86,104 @@
 </head>
 
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
+  <a id="top" accesskey="t"></a>
+  <header>
+    <div class="container">
+      <div id="mobile-header" class="container hidden-desktop hidden-tablet visible-mobile">
+        <h3><a href="/">London Amateur Brewers</a></h3>
+      </div>
+      <div id="desktop-header" class="container visible-desktop visible-tablet hidden-mobile">
+        <h1><a href="/">London Amateur Brewers</a></h1>
+        <p class="strapline">
+          The homebrew club for brewers of all levels based in and around London.
+          We meet monthly, come and join us.
+        </p>
+      </div>
+    </div>
+    <p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>
+  </header>
 
-<div class="container-fluid">
-	<a id="top" accesskey="t"></a>
+  <navigation>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="page_item"><a href="/">Home</a></li>
+                <li class="page_item"><a href="/news-and-updates">News and Updates</a></li>
+                <li class="page_item"><a href="/meeting-schedule">Meeting Schedule</a></li>
+                <li class="page_item"><a href="/our-favourite-pubs">Our Favourite Pubs</a></li>
+                <li class="page_item active"><a href="/forum">Forum</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div>
+  </navigation>
+
+<div class="container">
 	<div id="page-header">
-		<div class="headerbar ">
-			<div class="row-fluid">
-			
 
-			<div id="site-description">
-				<a href="{U_INDEX}" title="{L_INDEX}" id="logo">{SITE_LOGO_IMG}</a>
-				<h1>{SITENAME}</h1>
-				<p>{SITE_DESCRIPTION}</p>
-				<p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>
-			</div>
-			
-		
-
-			
-		</div>
-
-		<div class="navbar navbar-fixed-top">
+		<div class="navbar">
 			<div class="navbar-inner">
-				<div class="container-fluid">
+				<div class="container">
 				<a class="brand" href="{U_INDEX}">{SITENAME}</a>
 				<ul class="linklist nav" style="width: 50%;">
-				
-				
+
+
 				<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
 				<li class="divider-vertical"></li>
 				<a class="pull-left" id="adv-search" href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}"><i class="icon-plus-sign"></i>&nbsp;</a>
 				<form action="{U_SEARCH}" method="get" id="search" class="navbar-search ">
-				
+
 				<fieldset>
-				
+
 					<input name="keywords" id="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search search-query" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
 					 {S_SEARCH_HIDDEN_FIELDS}
 				</fieldset>
 				</form>
-				
+
 		<!-- ENDIF -->
-				
-							
+
 
 			<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
 			<li class="divider-vertical"></li>
-				
+
 				<li class="bb-faq"><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}"><i class="icon-question-sign "></i> {L_FAQ}</a></li>
 				<!-- IF not S_IS_BOT -->
 					<!-- IF S_DISPLAY_MEMBERLIST -->
 					<li class="divider-vertical"></li>
 					<li class="bb-members"><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}"><i class="icon-user "></i> {L_MEMBERLIST}</a></li><!-- ENDIF -->
-					
-					
-					
-					
-					
-						
-					
+
+
 					<!-- IF U_RESTORE_PERMISSIONS -->
 					<li class="divider-vertical"></li>
 					<a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a>
 					<!-- ENDIF -->
 				</li>
-			
+
 					<!-- ENDIF -->
-			
+
 			<!-- ENDIF -->
-				
+
 			<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
 					<li class="divider-vertical"></li>
 					<li class="bb-register"><a href="{U_REGISTER}"><i class="icon-user "></i> {L_REGISTER}</a></li>
 					<li class="divider-vertical"></li>
 					<li class="bb-logout"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x"><i class="icon-minus-sign "></i> {L_LOGIN_LOGOUT}</a></li>
 <!-- ENDIF -->
-					
+
 			</ul><!-- ul -->
-			
+
 			<div class="btn-group pull-right">
   <a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
     {S_USERNAME}
@@ -177,14 +191,14 @@
   </a>
   <ul class="dropdown-menu">
     <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
-    
-    	<!-- IF S_DISPLAY_PM --> 
-				
-				<li>		
+
+    	<!-- IF S_DISPLAY_PM -->
+
+				<li>
 						<a href="{U_PRIVATEMSGS}"><i class="icon-envelope "></i> <span class="label label-important">{PRIVATE_MESSAGE_INFO}</span><!-- IF PRIVATE_MESSAGE_INFO_UNREAD -->, {PRIVATE_MESSAGE_INFO_UNREAD}<!-- ENDIF --></a></li><!-- ENDIF -->
 
-    <!-- IF S_DISPLAY_SEARCH --> 
-					
+    <!-- IF S_DISPLAY_SEARCH -->
+
 					<li>
 					<a href="{U_SEARCH_SELF}"><i class="icon-file "></i> {L_SEARCH_SELF}</a>
 					</li>
@@ -193,12 +207,12 @@
 					<a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e"><i class="icon-wrench "></i> {L_PROFILE}</a>
 					</li>
 	<li class="divider"></li>
-	<!-- ENDIF -->				
+	<!-- ENDIF -->
 	<li class="bb-logout"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x"><i class="icon-minus-sign "></i> {L_LOGIN_LOGOUT}</a></li>
 	<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
-					
+
 					<li class="bb-register"><a href="{U_REGISTER}"><i class="icon-user "></i> {L_REGISTER}</a></li>
-					
+
 					<!-- ENDIF -->
   </ul>
 </div><!--btn group-->
@@ -212,14 +226,14 @@
 
 	<a id="start_here"></a>
 	<div id="page-body">
-	
+
 	<ul class="breadcrumb">
 		<li>
 	<a href="{U_INDEX}">{L_INDEX}</a><!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
 		</li>
 	</ul>
 		<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
-		<div id="information" class=" row-fluid rules">
+		<div id="information" class="row rules">
 			<div class="well">
 				<strong>{L_INFORMATION}:</strong> {L_BOARD_DISABLED}
 			</div>
