@@ -1,10 +1,11 @@
+/* @override http://local.lonbrew.com/forum/styles/lonbrew-phpb/theme/stylesheet.css */
+
 /*  phpBB3 Style Sheet
     --------------------------------------------------------------
-	Style name:			proBoot by Shibu Lijack
-	Based on style:		
-	Original author:	Tom Beddard ( http://www.subblue.com/ )
-	Modified by:		phpBB Group ( http://www.phpbb.com/ )
-	Customised by:		Shibu Lijack
+	Style name:			lonbrew-phpbb
+	Based on style:		proBoot by Shibu Lijack
+	Original author:	Shibu Lijack
+	Modified by:		Darren Oakley
     --------------------------------------------------------------
 */
 
@@ -19,3 +20,6 @@
 @import url("imageset.css");
 @import url("bootstrap.css");
 @import url("bootstrap-responsive.css");
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(/wp-content/themes/lonbrew-wp/assets/css/lonbrew.css);
