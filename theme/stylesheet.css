@@ -20,30 +20,11 @@
 @import url("tweaks.css");
 @import url("colours.css");
 @import url("imageset.css");
-@import url("bootstrap.css");
-@import url("bootstrap-responsive.css");
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+@import url("/wp-content/themes/lonbrew-wp/assets/css/bootstrap.min.css");
+@import url("/wp-content/themes/lonbrew-wp/assets/css/bootstrap-responsive.min.css");
+@import url("/wp-content/themes/lonbrew-wp/assets/css/lonbrew.css");
 
 body {
   padding-top: 0;
-  padding-bottom: 20px;
-  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-  background: url(/wp-content/themes/lonbrew-wp/assets/img/hop.png) no-repeat fixed right bottom;
-}
-
-header #desktop-header {
-  background-image: url(/wp-content/themes/lonbrew-wp/assets/img/banner.gif) !important;
-  text-indent: -9999px;
-  height: 133px;
-  margin: 0 auto;
-}
-
-header #mobile-header {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-header h1 {
-  margin: 25px 0;
 }
