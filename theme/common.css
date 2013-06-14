@@ -24,6 +24,9 @@ p.right {
   text-align: right;
 }
 
+.heading {
+  border-bottom: 1px solid #CCCCCC;
+}
 
 /* Horizontal lists
 ----------------------------------------*/
