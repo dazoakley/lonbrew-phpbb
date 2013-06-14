@@ -1,4 +1,4 @@
-/* @override http://local.lonbrew.com/forum/styles/lonbrew-phpb/theme/links.css */
+/* @override http://local.lonbrew.com/forum/styles/lonbrew-phpbb/theme/links.css */
 
 /* Link Styles
 ---------------------------------------- */
@@ -8,8 +8,6 @@ a {
 	direction: ltr;
 	unicode-bidi: embed;
 }
-
-
 
 /* Coloured usernames */
 .username-coloured {

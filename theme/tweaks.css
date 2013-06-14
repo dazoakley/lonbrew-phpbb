@@ -1,4 +1,4 @@
-/* @override http://local.lonbrew.com/forum/styles/lonbrew-phpb/theme/tweaks.css */
+/* @override http://local.lonbrew.com/forum/styles/lonbrew-phpbb/theme/tweaks.css */
 
 /* Style Sheet Tweaks
 
@@ -52,12 +52,6 @@ html>body dd label input { vertical-align: text-bottom; }	/* Align checkboxes/ra
 /* viewtopic fix */
 * html .post {
 	height: 25%;
-	overflow: hidden;
-}
-
-/* navbar fix */
-* html .clearfix, * html .navbar, ul.linklist {
-	height: 4%;
 	overflow: hidden;
 }
 
