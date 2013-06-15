@@ -20,70 +20,8 @@
 	background-color: #E7E8EA;
 }
 
-span.corners-top {
-	background-image: url("/forum/styles/lonbrew-phpbb/theme/images/corners_left.png");
-}
-
-span.corners-top span {
-	background-image: url("/forum/styles/lonbrew-phpbb/theme/images/corners_right.png");
-}
-
-span.corners-bottom {
-	background-image: url("/forum/styles/lonbrew-phpbb/theme/images/corners_left.png");
-}
-
-span.corners-bottom span {
-	background-image: url("/forum/styles/lonbrew-phpbb/theme/images/corners_right.png");
-}
-
-/* Horizontal lists
-----------------------------------------*/
-
-
-
-/* Table styles
-----------------------------------------*/
-table.table1 thead th {
-	color: #FFFFFF;
-}
-
-table.table1 tbody tr {
-	border-color: #BFC1CF;
-}
-
-table.table1 tbody tr:hover, table.table1 tbody tr.hover {
-	background-color: #CFE1F6;
-	color: #000;
-}
-
-table.table1 td {
-	color: #536482;
-}
-
-table.table1 tbody td {
-	border-top-color: #FAFAFA;
-}
-
-table.table1 tbody th {
-	border-bottom-color: #000000;
-	color: #333333;
-	background-color: #FFFFFF;
-}
-
-table.info tbody th {
-	color: #000000;
-}
-
 /* Misc layout styles
 ---------------------------------------- */
-dl.details dt {
-	color: #000000;
-}
-
-dl.details dd {
-	color: #536482;
-}
-
 .sep {
 	color: #1198D9;
 }
@@ -164,25 +102,6 @@ p.rules {
 --------------------------------------------------------------
 Colours and backgrounds for links.css
 -------------------------------------------------------------- */
-
-
-
-/* Links on gradient backgrounds */
-#search-box a:link, .navbg a:link, .forumbg .header a:link, .forabg .header a:link, th a:link {
-	color: #FFFFFF;
-}
-
-#search-box a:visited, .navbg a:visited, .forumbg .header a:visited, .forabg .header a:visited, th a:visited {
-	color: #FFFFFF;
-}
-
-#search-box a:hover, .navbg a:hover, .forumbg .header a:hover, .forabg .header a:hover, th a:hover {
-	color: #A8D8FF;
-}
-
-#search-box a:active, .navbg a:active, .forumbg .header a:active, .forabg .header a:active, th a:active {
-	color: #C8E6FF;
-}
 
 
 /* Post body links */

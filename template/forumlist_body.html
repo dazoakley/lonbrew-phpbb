@@ -6,29 +6,29 @@
 			</div>
 		</div>
 	<!-- ENDIF -->
-	
-	
+
+
 
 	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
 		<div class="forabg">
 			<div class="row-fluid">
 			<table class="table table-striped table-bordered">
 			<thead class="topiclist">
-				
+
 					<tr>
 						<th width="50%"><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></th>
 						<th class="topics">{L_TOPICS}</th>
 						<th class="posts">{L_POSTS}</th>
 						<th class="lastpost"><span>{L_LAST_POST}</span></th>
 					</tr>
-				
+
 			</thead>
 			<tbody class="topiclist forums">
 	<!-- ENDIF -->
 
 	<!-- IF not forumrow.S_IS_CAT -->
 		<tr>
-			
+
 				<td width="50%" title="{forumrow.FORUM_FOLDER_IMG_ALT}" >
 				<i class="pcon" style="background-image: url({forumrow.FORUM_FOLDER_IMG_SRC}); background-repeat: no-repeat;"></i>
 				<!-- IF S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED --><!-- <a class="feed-icon-forum" title="{L_FEED} - {forumrow.FORUM_NAME}" href="{U_FEED}?f={forumrow.FORUM_ID}"><img src="{T_THEME_PATH}/images/feed.gif" alt="{L_FEED} - {forumrow.FORUM_NAME}" /></a> --><!-- ENDIF -->
@@ -52,7 +52,7 @@
 						<!-- IF not S_IS_BOT --><a href="{forumrow.U_LAST_POST}">{LAST_POST_IMG}</a> <!-- ENDIF --><br />{forumrow.LAST_POST_TIME}<!-- ELSE -->{L_NO_POSTS}<br />&nbsp;<!-- ENDIF --></span>
 					</td>
 				<!-- ENDIF -->
-			
+
 		</tr>
 	<!-- ENDIF -->
 
@@ -65,9 +65,7 @@
 	<!-- ENDIF -->
 
 <!-- BEGINELSE -->
-	<div class="panel">
-		<div class="inner"><span class="corners-top"><span></span></span>
-		<strong>{L_NO_FORUMS}</strong>
-		<span class="corners-bottom"><span></span></span></div>
-	</div>
+  <div class="alert alert-error">
+    <strong>{L_NO_FORUMS}</strong>
+  </div>
 <!-- END forumrow -->
