@@ -120,7 +120,7 @@ dt label {
 dd label {
   white-space: nowrap;
   color: #333;
-  float: none;
+  float: left;
 }
 
 dd input, dd textarea {
