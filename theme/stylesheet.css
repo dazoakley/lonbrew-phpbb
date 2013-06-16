@@ -17,8 +17,8 @@
 @import url("forms.css");
 @import url("colours.css");
 
-@import url("/wp-content/themes/lonbrew-wp/assets/css/bootstrap.css");
-@import url("/wp-content/themes/lonbrew-wp/assets/css/bootstrap-responsive.css");
+@import url("/wp-content/themes/lonbrew-wp/assets/css/bootstrap.min.css");
+@import url("/wp-content/themes/lonbrew-wp/assets/css/bootstrap-responsive.min.css");
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 @import url("/wp-content/themes/lonbrew-wp/assets/css/lonbrew.css");
 
