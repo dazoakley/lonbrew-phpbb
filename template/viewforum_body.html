@@ -178,7 +178,7 @@
     <!-- ENDIF -->
 
     <!-- IF PAGINATION or TOTAL_POSTS or TOTAL_TOPICS -->
-      <div class="p-pagination span8">
+      <div class="p-pagination span4">
         <!-- IF not S_IS_BOT -->
           <a href="{U_MARK_TOPICS}" accesskey="m">{L_MARK_TOPICS_READ}</a>
         <!-- ENDIF -->
@@ -195,6 +195,17 @@
       </div>
     <!-- ENDIF -->
 
+    <!-- IF S_DISPLAY_SEARCHBOX -->
+      <div class="span4">
+        <form action="{S_SEARCHBOX_ACTION}" method="get" id="forum-search" class="form-search pull-right" style="margin:0;">
+          <fieldset>
+            <input class="input-medium search" type="text" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_FORUM}" />
+            <button type="submit" class="btn">{L_SEARCH}</button>
+            {S_SEARCH_LOCAL_HIDDEN_FIELDS}
+          </fieldset>
+        </form>
+      </div>
+    <!-- ENDIF -->
   </div>
 </div>
 <!-- ENDIF -->

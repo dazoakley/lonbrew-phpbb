@@ -510,7 +510,11 @@ a.sendemail {
 .quote-icon, .quote-icon a		{ background-image: url("/forum/styles/lonbrew-phpbb/theme/en/icon_post_quote.gif"); }
 
 /* Moderator icons */
-
+.report-icon, .report-icon a		{ background-image: url("/forum/styles/lonbrew-phpbb/imageset/icon_post_report.gif"); }
+.edit-icon, .edit-icon a			{ background-image: url("/forum/styles/lonbrew-phpbb/imageset/en/icon_post_edit.gif"); }
+.delete-icon, .delete-icon a		{ background-image: url("/forum/styles/lonbrew-phpbb/imageset/icon_post_delete.gif"); }
+.info-icon, .info-icon a			{ background-image: url("/forum/styles/lonbrew-phpbb/imageset/icon_post_info.gif"); }
+.warn-icon, .warn-icon a			{ background-image: url("/forum/styles/lonbrew-phpbb/imageset/icon_user_warn.gif"); }
 
 /* Forum icons & Topic icons */
 .global_read													{ background-image: url("/forum/styles/lonbrew-phpbb/theme/images/announce_read.gif"); }

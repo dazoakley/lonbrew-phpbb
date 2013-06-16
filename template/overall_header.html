@@ -120,11 +120,20 @@
   <a id="start_here"></a>
   <div class="container">
 
-    <ul id="breadcrumb" class="breadcrumb">
-      <li>
-        <a href="{U_INDEX}" class="phpbb-icon-home">{L_INDEX}</a><!-- BEGIN navlinks --> <span class="divider">/</span> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
-      </li>
-    </ul>
+    <div class="breadcrumbalike">
+      <ul class="linklist rightside">
+        <!-- IF U_EMAIL_TOPIC --><li class="rightside"><a href="{U_EMAIL_TOPIC}" title="{L_EMAIL_TOPIC}" class="sendemail">{L_EMAIL_TOPIC}</a></li><!-- ENDIF -->
+        <!-- IF U_EMAIL_PM --><li class="rightside"><a href="{U_EMAIL_PM}" title="{L_EMAIL_PM}" class="sendemail">{L_EMAIL_PM}</a></li><!-- ENDIF -->
+        <!-- IF U_PRINT_TOPIC --><li class="rightside"><a href="{U_PRINT_TOPIC}" title="{L_PRINT_TOPIC}" accesskey="p" class="print">{L_PRINT_TOPIC}</a></li><!-- ENDIF -->
+        <!-- IF U_PRINT_PM --><li class="rightside"><a href="{U_PRINT_PM}" title="{L_PRINT_PM}" accesskey="p" class="print">{L_PRINT_PM}</a></li><!-- ENDIF -->
+      </ul>
+
+      <ul>
+        <li>
+          <a href="{U_INDEX}" class="phpbb-icon-home">{L_INDEX}</a><!-- BEGIN navlinks --> <span class="divider">/</span> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks -->
+        </li>
+      </ul>
+    </div>
 
     <div id="user_tools" class="container">
       <!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
