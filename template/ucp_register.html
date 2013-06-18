@@ -2,112 +2,135 @@
 
 <script type="text/javascript">
 // <![CDATA[
-	/**
-	* Change language
-	*/
-	function change_language(lang_iso)
-	{
-		document.forms['register'].change_lang.value = lang_iso;
-		document.forms['register'].submit.click();
-	}
+  /**
+  * Change language
+  */
+  function change_language(lang_iso) {
+    document.forms['register'].change_lang.value = lang_iso;
+    document.forms['register'].submit.click();
+  }
 
-	<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_REFRESH -->
-	onload_functions.push('apply_onkeypress_event()');
-	<!-- ENDIF -->
-
+  <!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_REFRESH -->
+  onload_functions.push('apply_onkeypress_event()');
+  <!-- ENDIF -->
 // ]]>
 </script>
 
-<form method="post" action="{S_UCP_ACTION}" id="register">
-
+<form method="post" action="{S_UCP_ACTION}" class="form-horizontal">
 <div class="panel row-fluid">
-	<div class="well inner">
+  <div class="well inner">
+    <h3>{L_REGISTRATION}</h3>
 
-	<h3 class="box-heading">{SITENAME} - {L_REGISTRATION}</h3>
+      <!-- IF ERROR -->
+      <div class="alert alert-error">
+        <div>{ERROR}</div>
+      </div>
+      <!-- ENDIF -->
 
-	<fieldset class="fields2">
-	<!-- IF ERROR --><dl><dd class="error">{ERROR}</dd></dl><!-- ENDIF -->
-	<!-- IF L_REG_COND -->
-		<dl><dd><strong>{L_REG_COND}</strong></dd></dl>
-	<!-- ENDIF -->
-	<dl>
-		<dt><label for="username">{L_USERNAME}:</label><br /><span>{L_USERNAME_EXPLAIN}</span></dt>
-		<dd><input type="text" tabindex="1" name="username" id="username" size="25" value="{USERNAME}" class="inputbox autowidth" title="{L_USERNAME}" /></dd>
-	</dl>
-  	<dl>
-    		<dt><label for="email">{L_EMAIL_ADDRESS}:</label></dt>
-      		<dd><input type="text" tabindex="2" name="email" id="email" size="25" maxlength="100" value="{EMAIL}" class="inputbox autowidth" title="{L_EMAIL_ADDRESS}" /></dd>
-  	</dl>
-  	<dl>
-      <dt><label for="email_confirm">{L_CONFIRM_EMAIL}:</label></dt>
-      <dd><input type="text" tabindex="3" name="email_confirm" id="email_confirm" size="25" maxlength="100" value="{EMAIL_CONFIRM}" class="inputbox autowidth" title="{L_CONFIRM_EMAIL}" /></dd>
-   </dl>
-	<dl>
-		<dt><label for="new_password">{L_PASSWORD}:</label><br /><span>{L_PASSWORD_EXPLAIN}</span></dt>
-		<dd><input type="password" tabindex="4" name="new_password" id="new_password" size="25" value="{PASSWORD}" class="inputbox autowidth" title="{L_NEW_PASSWORD}" /></dd>
-	</dl>
-	<dl>
-		<dt><label for="password_confirm">{L_CONFIRM_PASSWORD}:</label></dt>
-		<dd><input type="password" tabindex="5" name="password_confirm" id="password_confirm" size="25" value="{PASSWORD_CONFIRM}" class="inputbox autowidth" title="{L_CONFIRM_PASSWORD}" /></dd>
-	</dl>
+      <!-- IF L_REG_COND -->
+      <div class="alert alert-info">
+        <div>{L_REG_COND}</div>
+      </div>
+      <!-- ENDIF -->
 
-	<hr />
+      <div class="control-group">
+        <label for="username" class="control-label">{L_USERNAME}:</label>
+        <div class="controls">
+          <input type="text" name="username" id="username" placeholder="{USERNAME}" title="{L_USERNAME}" />
+          <span class="help-inline">{L_USERNAME_EXPLAIN}</span>
+        </div>
+      </div>
 
-	<dl>
-		<dt><label for="lang">{L_LANGUAGE}:</label></dt>
-		<dd><select name="lang" id="lang" onchange="change_language(this.value); return false;" tabindex="6" title="{L_LANGUAGE}">{S_LANG_OPTIONS}</select></dd>
-	</dl>
-	<dl>
-		<dt><label for="tz">{L_TIMEZONE}:</label></dt>
-		<dd><select name="tz" id="tz" tabindex="7" class="autowidth">{S_TZ_OPTIONS}</select></dd>
-	</dl>
+      <div class="control-group">
+        <label for="email" class="control-label">{L_EMAIL_ADDRESS}:</label>
+        <div class="controls">
+          <input type="text" name="email" id="email" placeholder="{EMAIL}" title="{L_EMAIL_ADDRESS}" />
+        </div>
+      </div>
 
-	<!-- IF .profile_fields -->
-		<dl><dd><strong>{L_ITEMS_REQUIRED}</strong></dd></dl>
+      <div class="control-group">
+        <label for="email_confirm" class="control-label">{L_CONFIRM_EMAIL}:</label>
+        <div class="controls">
+          <input type="text" name="email_confirm" id="email_confirm" placeholder="{EMAIL_CONFIRM}" title="{L_CONFIRM_EMAIL}" />
+        </div>
+      </div>
 
-	<!-- BEGIN profile_fields -->
-		<dl>
-			<dt><label<!-- IF profile_fields.FIELD_ID --> for="{profile_fields.FIELD_ID}"<!-- ENDIF -->>{profile_fields.LANG_NAME}:<!-- IF profile_fields.S_REQUIRED --> *<!-- ENDIF --></label>
-			<!-- IF profile_fields.LANG_EXPLAIN --><br /><span>{profile_fields.LANG_EXPLAIN}</span><!-- ENDIF -->
-			<!-- IF profile_fields.ERROR --><br /><span class="error">{profile_fields.ERROR}</span><!-- ENDIF --></dt>
-			<dd>{profile_fields.FIELD}</dd>
-		</dl>
-	<!-- END profile_fields -->
-	<!-- ENDIF -->
 
-	</fieldset>
-	<hr />
-	<!-- IF CAPTCHA_TEMPLATE -->
-	<!-- DEFINE $CAPTCHA_TAB_INDEX = 8 -->
-	<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
-<!-- ENDIF -->
+      <div class="control-group">
+        <label for="new_password" class="control-label">{L_PASSWORD}:</label>
+        <div class="controls">
+          <input type="text" name="new_password" id="new_password" placeholder="{PASSWORD}" title="{L_NEW_PASSWORD}" />
+          <span class="help-inline">{L_PASSWORD_EXPLAIN}</span>
+        </div>
+      </div>
 
-	</div>
+      <div class="control-group">
+        <label for="password_confirm" class="control-label">{L_CONFIRM_PASSWORD}:</label>
+        <div class="controls">
+          <input type="text" name="password_confirm" id="password_confirm" placeholder="{PASSWORD_CONFIRM}" title="{L_CONFIRM_PASSWORD}" />
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="control-group">
+        <label for="lang" class="control-label">{L_LANGUAGE}:</label>
+        <div class="controls">
+          <select name="lang" id="lang" onchange="change_language(this.value); return false;" title="{L_LANGUAGE}">{S_LANG_OPTIONS}</select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="tz" class="control-label">{L_TIMEZONE}:</label>
+        <div class="controls">
+          <select name="tz" id="tz">{S_TZ_OPTIONS}</select>
+        </div>
+      </div>
+
+      <!-- IF .profile_fields -->
+        <p><strong>{L_ITEMS_REQUIRED}</strong></p>
+        <!-- BEGIN profile_fields -->
+          <div class="control-group <!-- IF profile_fields.ERROR -->error<!-- ENDIF -->">
+            <label for="{profile_fields.FIELD_ID}" class="control-label">{profile_fields.LANG_NAME}:<!-- IF profile_fields.S_REQUIRED --> *<!-- ENDIF --></label>
+            <div class="controls">
+              {profile_fields.FIELD}
+              <!-- IF profile_fields.ERROR --><span class="help-inline">{profile_fields.ERROR}</span><!-- ENDIF -->
+              <!-- IF profile_fields.LANG_EXPLAIN --><span class="help-inline">{profile_fields.LANG_EXPLAIN}</span><!-- ENDIF -->
+            </div>
+          </div>
+        <!-- END profile_fields -->
+      <!-- ENDIF -->
+
+      <hr />
+
+      <!-- IF CAPTCHA_TEMPLATE -->
+        <!-- DEFINE $CAPTCHA_TAB_INDEX = 8 -->
+        <!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+      <!-- ENDIF -->
+
+  </div>
 </div>
 
 
 <!-- IF S_COPPA -->
 <div class="panel row-fluid">
-	<div class="inner well">
-
-	<h3 class="box-heading">{L_COPPA_COMPLIANCE}</h3>
-
-	<p>{L_COPPA_EXPLAIN}</p>
-	</div>
+  <div class="inner well">
+    <h3>{L_COPPA_COMPLIANCE}</h3>
+    <p>{L_COPPA_EXPLAIN}</p>
+  </div>
 </div>
 <!-- ENDIF -->
 
 <div class="panel">
-	<div class="inner">
+  <div class="inner">
+    <fieldset class="submit-buttons">
+      {S_HIDDEN_FIELDS}
+      <input type="submit" name="submit" id="submit" value="{L_SUBMIT}" class="btn btn-primary default-submit-action" />
+      <input type="reset" value="{L_RESET}" name="reset" class="btn" />&nbsp;
+      {S_FORM_TOKEN}
+    </fieldset>
 
-	<fieldset class="submit-buttons">
-		{S_HIDDEN_FIELDS}
-		<input type="reset" value="{L_RESET}" name="reset" class="btn" />&nbsp;
-		<input type="submit" tabindex="9" name="submit" id="submit" value="{L_SUBMIT}" class="btn default-submit-action" />
-		{S_FORM_TOKEN}
-	</fieldset>
-
-	</div>
+  </div>
 </div>
 </form>
 
