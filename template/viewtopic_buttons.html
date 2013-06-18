@@ -1,0 +1,38 @@
+<!-- IF not S_IS_BOT and S_DISPLAY_REPLY_INFO -->
+  <div class="span4 buttons">
+    <!-- IF S_IS_LOCKED -->
+      <div class="locked-icon" title="{L_TOPIC_LOCKED}"><a href="{U_POST_REPLY_TOPIC}"><span></span>{L_TOPIC_LOCKED_SHORT}</a></div>
+    <!-- ELSE -->
+      <div class="reply-icon" title="{L_POST_REPLY}"><a href="{U_POST_REPLY_TOPIC}"><span></span>{L_POST_REPLY}</a></div>
+    <!-- ENDIF -->
+  </div>
+<!-- ENDIF -->
+
+<!-- IF PAGINATION or TOTAL_POSTS -->
+  <div class="span4 p-pagination">
+    <!-- IF not S_IS_BOT -->
+      <a href="{U_VIEW_UNREAD_POST}">{L_VIEW_UNREAD_POST}</a>
+    <!-- ENDIF -->
+    &bull; <span>{TOTAL_POSTS}</span>
+    <!-- IF PAGE_NUMBER -->
+      <!-- IF PAGINATION -->
+        &bull; <a href="#" onclick="jumpto(); return false;" title="{L_JUMP_TO_PAGE}"><span>{PAGE_NUMBER}</span></a> &bull; <span>{PAGINATION}</span>
+      <!-- ELSE -->
+        &bull; <span>{PAGE_NUMBER}</span>
+      <!-- ENDIF -->
+    <!-- ENDIF -->
+  </div>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_SEARCHBOX -->
+  <div class="span4">
+    <form method="get" id="topic-search" action="{S_SEARCHBOX_ACTION}" class="form-search pull-right" style="margin:0;">
+      <fieldset>
+        <input class="input-medium search"  type="text" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_TOPIC}" />
+        <button class="btn" type="submit">{L_SEARCH}</button>
+        {S_SEARCH_LOCAL_HIDDEN_FIELDS}
+      </fieldset>
+    </form>
+  </div>
+<!-- ENDIF -->
+
