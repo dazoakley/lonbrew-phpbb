@@ -32,6 +32,7 @@
     </div>
 
     <!-- IF S_DISPLAY_FULL_LOGIN and (U_SEND_PASSWORD or U_RESEND_ACTIVATION) -->
+      <hr />
       <div class="control-group">
         <div class="controls">
           <!-- IF U_SEND_PASSWORD --><div><a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a></div><!-- ENDIF -->
@@ -41,10 +42,12 @@
     <!-- ENDIF -->
 
     <!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_CODE -->
+      <hr />
       <!-- INCLUDE {CAPTCHA_TEMPLATE} -->
     <!-- ENDIF -->
 
     <!-- IF S_DISPLAY_FULL_LOGIN -->
+      <hr />
       <div class="control-group">
         <div class="controls">
           <!-- IF S_AUTOLOGIN_ENABLED -->
@@ -65,6 +68,7 @@
     {S_LOGIN_REDIRECT}
     {S_HIDDEN_FIELDS}
 
+    <hr />
     <div class="control-group">
       <div class="controls">
         <input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary" />

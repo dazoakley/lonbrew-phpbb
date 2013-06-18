@@ -101,35 +101,28 @@
         <!-- END profile_fields -->
       <!-- ENDIF -->
 
-      <hr />
-
       <!-- IF CAPTCHA_TEMPLATE -->
+        <hr />
         <!-- DEFINE $CAPTCHA_TAB_INDEX = 8 -->
         <!-- INCLUDE {CAPTCHA_TEMPLATE} -->
       <!-- ENDIF -->
 
-  </div>
-</div>
+      <!-- IF S_COPPA -->
+        <hr />
+        <h3>{L_COPPA_COMPLIANCE}</h3>
+        <p>{L_COPPA_EXPLAIN}</p>
+      <!-- ENDIF -->
 
-
-<!-- IF S_COPPA -->
-<div class="panel row-fluid">
-  <div class="inner well">
-    <h3>{L_COPPA_COMPLIANCE}</h3>
-    <p>{L_COPPA_EXPLAIN}</p>
-  </div>
-</div>
-<!-- ENDIF -->
-
-<div class="panel">
-  <div class="inner">
-    <fieldset class="submit-buttons">
       {S_HIDDEN_FIELDS}
-      <input type="submit" name="submit" id="submit" value="{L_SUBMIT}" class="btn btn-primary default-submit-action" />
-      <input type="reset" value="{L_RESET}" name="reset" class="btn" />&nbsp;
       {S_FORM_TOKEN}
-    </fieldset>
 
+      <hr />
+      <div class="control-group">
+        <div class="controls">
+          <input type="submit" name="submit" id="submit" value="{L_SUBMIT}" class="btn btn-primary default-submit-action" />
+          <input type="reset" value="{L_RESET}" name="reset" class="btn" />&nbsp;
+        </div>
+      </div>
   </div>
 </div>
 </form>
