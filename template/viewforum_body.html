@@ -11,17 +11,13 @@
 <!-- ENDIF -->
 
 <!-- IF S_FORUM_RULES -->
-  <div class="rules">
-    <div class="inner">
-
+  <div class="alert alert-info">
     <!-- IF U_FORUM_RULES -->
       <a href="{U_FORUM_RULES}">{L_FORUM_RULES}</a>
     <!-- ELSE -->
       <strong>{L_FORUM_RULES}</strong><br />
       {FORUM_RULES}
     <!-- ENDIF -->
-
-    </div>
   </div>
 <!-- ENDIF -->
 
@@ -101,10 +97,8 @@
 
 <!-- BEGINELSE -->
 	<!-- IF S_IS_POSTABLE -->
-	<div class="panel">
-		<div class="inner">
+	<div class="alert">
 		<strong>{L_NO_TOPICS}</strong>
-		</div>
 	</div>
 	<!-- ENDIF -->
 <!-- END topicrow -->
