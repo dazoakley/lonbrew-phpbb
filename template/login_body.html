@@ -8,7 +8,7 @@
 
 <form action="{S_LOGIN_ACTION}" method="post" id="login" class="form-horizontal">
 <div class="panel row-fluid">
-  <div class="well inner">
+  <div class="well">
     <h3><!-- IF LOGIN_EXPLAIN -->{LOGIN_EXPLAIN}<!-- ELSE -->{L_LOGIN}<!-- ENDIF --></h3>
 
     <!-- IF LOGIN_ERROR -->
@@ -79,7 +79,7 @@
 
   <!-- IF not S_ADMIN_AUTH and S_REGISTER_ENABLED -->
     <div class="row-fluid panel">
-      <div class="well inner">
+      <div class="well">
         <h3>{L_REGISTER}</h3>
 
         <p>{L_LOGIN_INFO}</p>
