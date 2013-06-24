@@ -5,11 +5,21 @@
     <!-- ELSE -->
       <div class="reply-icon" title="{L_POST_REPLY}"><a href="{U_POST_REPLY_TOPIC}"><span></span>{L_POST_REPLY}</a></div>
     <!-- ENDIF -->
+
+    <!-- IF S_DISPLAY_SEARCHBOX -->
+      <form method="get" id="topic-search" action="{S_SEARCHBOX_ACTION}">
+        <div class="input-append">
+          {S_SEARCH_LOCAL_HIDDEN_FIELDS}
+          <input type="text" class="input-medium" name="keywords" id="search_keywords" placeholder="{L_SEARCH_TOPIC}" />
+          <button type="submit" class="btn">{L_SEARCH}</button>
+        </div>
+      </form>
+    <!-- ENDIF -->
   </div>
 <!-- ENDIF -->
 
 <!-- IF PAGINATION or TOTAL_POSTS -->
-  <div class="span4 p-pagination">
+  <div class="span8 p-pagination text-right">
     <!-- IF not S_IS_BOT -->
       <a href="{U_VIEW_UNREAD_POST}">{L_VIEW_UNREAD_POST}</a>
     <!-- ENDIF -->
@@ -21,18 +31,6 @@
         &bull; <span>{PAGE_NUMBER}</span>
       <!-- ENDIF -->
     <!-- ENDIF -->
-  </div>
-<!-- ENDIF -->
-
-<!-- IF S_DISPLAY_SEARCHBOX -->
-  <div class="span4">
-    <form method="get" id="topic-search" action="{S_SEARCHBOX_ACTION}" class="form-search pull-right" style="margin:0;">
-      <fieldset>
-        <input class="input-medium search"  type="text" name="keywords" id="search_keywords" size="20" placeholder="{L_SEARCH_TOPIC}" />
-        <button class="btn" type="submit">{L_SEARCH}</button>
-        {S_SEARCH_LOCAL_HIDDEN_FIELDS}
-      </fieldset>
-    </form>
   </div>
 <!-- ENDIF -->
 

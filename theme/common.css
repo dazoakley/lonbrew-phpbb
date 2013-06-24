@@ -17,7 +17,7 @@ hr.dashed {
 }
 
 hr.divider {
-  display: none;
+  border: none;
 }
 
 p.right {
