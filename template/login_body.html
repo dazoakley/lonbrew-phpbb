@@ -7,7 +7,7 @@
 </script>
 
 <form action="{S_LOGIN_ACTION}" method="post" id="login" class="form-horizontal">
-<div class="panel row-fluid">
+<div class="row-fluid">
   <div class="well">
     <h3><!-- IF LOGIN_EXPLAIN -->{LOGIN_EXPLAIN}<!-- ELSE -->{L_LOGIN}<!-- ENDIF --></h3>
 
@@ -68,7 +68,7 @@
     {S_LOGIN_REDIRECT}
     {S_HIDDEN_FIELDS}
 
-    <hr />
+    <hr class="dashed" />
     <div class="control-group">
       <div class="controls">
         <input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary" />

@@ -1,35 +1,36 @@
 <!-- INCLUDE overall_header.html -->
 
+<form id="login_forum" method="post" action="{S_LOGIN_ACTION}" class="form-horizontal">
+  {S_FORM_TOKEN}
+  <div class="row-fluid">
+    <div class="well">
+      <h3>{L_LOGIN} {FORUM_NAME}</h3>
+      <p>{L_LOGIN_FORUM}</p>
 
+      <!-- IF LOGIN_ERROR -->
+      <div class="alert alert-error">
+        <div>{LOGIN_ERROR}</div>
+      </div>
+      <!-- ENDIF -->
 
-<form id="login_forum" method="post" action="{S_LOGIN_ACTION}">
-{S_FORM_TOKEN}
-<div class="row-fluid panel">
-	<div class="well">
-		<h3 class="box-heading">{L_LOGIN} {FORUM_NAME}</h3>
-	<p>{L_LOGIN_FORUM}</p>
+      <div class="control-group">
+        <label for="password" class="control-label">{L_PASSWORD}:</label>
+        <div class="controls">
+          <input type="password" name="password" id="password" />
+        </div>
+      </div>
 
-	<fieldset class="fields2">
-	<!-- IF LOGIN_ERROR -->
-		<dl>
-			<dt>&nbsp;</dt>
-			<dd class="error">{LOGIN_ERROR}</dd>
-		</dl>
-	<!-- ENDIF -->
-	<dl>
-		<dt><label for="password">{L_PASSWORD}:</label></dt>
-		<dd><input class="inputbox narrow" type="password" name="password" id="password" size="25" tabindex="1" /></dd>
-	</dl>
-	<dl class="fields2">
-		<dt>&nbsp;</dt>
-		<dd>{S_HIDDEN_FIELDS}<input type="submit" name="login" id="login" class="button1" value="{L_LOGIN}" tabindex="2" /></dd>
-	</dl>
-	{S_LOGIN_REDIRECT}
-	</fieldset>
+      <div class="control-group">
+        <div class="controls">
+          <input type="submit" name="login" id="login" class="btn btn-primary" value="{L_LOGIN}" />
+        </div>
+      </div>
 
-	</div>
-</div>
+      {S_HIDDEN_FIELDS}
+      {S_LOGIN_REDIRECT}
 
+    </div>
+  </div>
 </form>
 
 <!-- INCLUDE jumpbox.html -->
