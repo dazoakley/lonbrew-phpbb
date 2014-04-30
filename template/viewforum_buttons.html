@@ -7,11 +7,11 @@
     <!-- ENDIF -->
 
     <!-- IF S_DISPLAY_SEARCHBOX -->
-      <form action="{S_SEARCHBOX_ACTION}" method="get" id="forum-search">
+      <form action="{S_SEARCHBOX_ACTION}" method="get" id="forum-search" class="form-search">
         <div class="input-append">
           {S_SEARCH_LOCAL_HIDDEN_FIELDS}
-          <input class="input-medium" type="text" name="keywords" id="search_keywords" placeholder="{L_SEARCH_FORUM}" />
-          <button type="submit" class="btn">{L_SEARCH}</button>
+          <input class="input-medium search-query" type="text" name="keywords" id="search_keywords" placeholder="{L_SEARCH_FORUM}" />
+          <button type="submit" class="btn"><i class="icon-search"></i> {L_SEARCH}</button>
         </div>
       </form>
     <!-- ENDIF -->
