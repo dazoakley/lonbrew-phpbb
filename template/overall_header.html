@@ -97,26 +97,28 @@
         <h3><a href="/">London Amateur Brewers</a></h3>
       </div>
 
-      <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-        <div id="search-box" class="pull-right visible-desktop visible-tablet hidden-mobile" style="padding-top:50px;">
-          <form action="{U_SEARCH}" method="get" id="search" class="form-search">
-            <div class="input-append">
-              <input name="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="span2 search-query" placeholder="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
-              <button class="btn" type="submit"><i class="icon-search"></i> {L_SEARCH}</button><br />
-            </div>
-            <div style="text-align:right;">
-              <a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}">{L_SEARCH_ADV}</a> {S_SEARCH_HIDDEN_FIELDS}
-            </div>
-          </form>
-        </div>
-      <!-- ENDIF -->
-
       <div id="desktop-header" class="container visible-desktop visible-tablet hidden-mobile">
-        <h1><a href="/">London Amateur Brewers</a></h1>
-        <p class="strapline">
-          The homebrew club for brewers of all levels based in and around London.
-          We meet monthly, come and join us.
-        </p>
+        <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+          <div id="search-box" class="pull-right visible-desktop visible-tablet hidden-mobile" style="padding-top:50px;">
+            <form action="{U_SEARCH}" method="get" id="search" class="form-search">
+              <div class="input-append">
+                <input name="keywords" type="text" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="span2 search-query" placeholder="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
+                <button class="btn" type="submit"><i class="icon-search"></i> {L_SEARCH}</button><br />
+              </div>
+              <div style="text-align:right;">
+                <a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}">{L_SEARCH_ADV}</a> {S_SEARCH_HIDDEN_FIELDS}
+              </div>
+            </form>
+          </div>
+        <!-- ENDIF -->
+
+        <div id="desktop-header-content">
+          <h1><a href="/">London Amateur Brewers</a></h1>
+          <p class="strapline">
+            The homebrew club for brewers of all levels based in and around London.
+            We meet monthly, come and join us.
+          </p>
+        </div>
       </div>
     </div>
     <p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>
@@ -152,7 +154,9 @@
                 <li><a href="/uk-homebrew-calendar/">Calendar</a></li>
                 <li><a href="/our-favourite-pubs/">Our Favourite Pubs</a></li>
                 <li><a href="/contact/">Contact Us</a></li>
-                <li class="active"><a href="/forum/">Forum</a></li>
+              </ul>
+              <ul class="nav pull-right">
+                <li class="active"><a href="/forum/">Members Forum</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
